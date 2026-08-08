@@ -1,0 +1,359 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5f3ef;
+    color: #1a1a1a;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.75rem 4rem;
+}
+
+.logo-icon {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #555555;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-link:hover, 
+.menu-link.active {
+    color: #000000;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.btn-primary {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 0.65rem 1.6rem;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.04);
+    background-color: #222222;
+}
+
+.auth-separator {
+    color: #d1cdc4;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+.login-action {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+}
+
+.login-action:hover {
+    opacity: 0.7;
+}
+
+
+.hero-showcase {
+    display: flex;
+    align-items: center;
+    padding: 1rem 4rem 3rem 4rem;
+    gap: 5rem;
+    flex: 1;
+}
+
+.hero-content-column {
+    flex: 1.2;
+}
+
+.main-title {
+    font-size: clamp(2.75rem, 5vw, 4.6rem); 
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    margin-bottom: 1.5rem;
+}
+
+.serif-italic {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0px;
+}
+
+.hero-description {
+    font-size: 1.05rem;
+    color: #605d56;
+    line-height: 1.6;
+    max-width: 440px;
+    margin-bottom: 3.5rem;
+}
+
+.nft-showcase-grid {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 620px;
+}
+
+.nft-preview-card {
+    background: #ffffff;
+    padding: 0.85rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
+    flex: 1;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+}
+
+.nft-preview-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 36px rgba(40, 37, 32, 0.08);
+}
+
+.card-media-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 14px;
+    background-color: #faf9f6;
+    margin-bottom: 0.8rem;
+}
+
+.nft-thumb {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.card-details {
+    padding: 0.25rem 0.4rem;
+}
+
+.nft-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.15rem;
+}
+
+.artist-attribution {
+    font-size: 0.8rem;
+    color: #807c73;
+    margin-bottom: 0.6rem;
+}
+
+.price-tag {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.hero-visual-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+}
+
+.composition-container {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    height: 420px;
+}
+
+.layer-asset {
+    position: absolute;
+    height: auto;
+    object-fit: contain;
+}
+
+.stone-layer {
+    top: 5%;
+    right: 25%;
+    width: 140px;
+    z-index: 1;
+}
+
+.hand-layer {
+    bottom: 0;
+    right: 0;
+    width: 330px;
+    z-index: 2;
+}
+
+.action-trigger-btn {
+    position: absolute;
+    bottom: 22%;
+    left: 8%;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 0.9rem 1.8rem;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.action-trigger-btn:hover {
+    background-color: #222222;
+    transform: translateY(-2px);
+}
+
+
+.verification-barcode-group {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    padding-right: 0.5rem;
+}
+
+.vertical-identifier {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 3.4rem;
+    font-weight: 800;
+    color: rgba(26, 26, 26, 0.05); 
+    letter-spacing: 5px;
+    user-select: none;
+}
+
+.barcode-matrix-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.barcode-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+.spectrum-bar-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+.running-marquee-ticker {
+    background-color: #efece5;
+    border-top: 1px solid #e2ded5;
+    padding: 1.25rem 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.ticker-content-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    width: 100%;
+}
+
+.ticker-phrase {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #1a1a1a;
+}
+
+.ticker-spacer-star {
+    width: 11px;
+    height: 11px;
+    object-fit: contain;
+    opacity: 0.8;
+}
+
+
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 1.5rem 2.5rem;
+    }
+    .hero-showcase {
+        padding: 1rem 2.5rem 3rem 2.5rem;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 968px) {
+    body {
+        overflow-y: auto;
+    }
+    .hero-showcase {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .hero-visual-column {
+        width: 100%;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .composition-container {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 580px) {
+    .navbar {
+        padding: 1.5rem;
+    }
+    .nav-menu {
+        display: none; 
+    }
+    .hero-showcase {
+        padding: 1.5rem;
+    }
+    .nft-showcase-grid {
+        flex-direction: column;
+        width: 100%;
+    }
+}
